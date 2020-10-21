@@ -65,6 +65,19 @@ namespace DS_LinkedList
                 node.next = after;
             }
         }
+        public Node Pop()
+        {
+            Node n = head;
+            if(head == null)
+            {
+                Console.WriteLine("Linked List is Empty.");
+            }
+            else
+            {
+                head = head.next;
+            }
+            return n;
+        }
         public void Display()
         {
             if (head == null)
