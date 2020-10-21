@@ -20,6 +20,23 @@ namespace DS_LinkedList
                 head = node;
             }
         }
+        public void Append(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node n = head;
+                while (n.next != null)
+                {
+                    n = n.next;
+                }
+                n.next = node;
+            }
+        }
         public void Display()
         {
             if (head == null)
