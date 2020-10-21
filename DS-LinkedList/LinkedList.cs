@@ -78,6 +78,25 @@ namespace DS_LinkedList
             }
             return n;
         }
+        public Node PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty.");
+                return null;
+            }
+            else
+            {
+                Node n = head;
+                while (n.next.next != null)
+                {
+                    n = n.next;
+                }
+                Node removedNode = n.next;
+                n.next = null;
+                return removedNode;
+            }
+        }
         public void Display()
         {
             if (head == null)

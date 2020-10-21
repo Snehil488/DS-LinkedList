@@ -11,7 +11,7 @@ namespace DS_LinkedList
             linkedList.Append(30);
             linkedList.Append(70);
             linkedList.Display();
-            Console.WriteLine("Popped first element " + linkedList.Pop().data);
+            Console.WriteLine("Popped last element " + linkedList.PopLast().data);
             linkedList.Display();
         }
     }
