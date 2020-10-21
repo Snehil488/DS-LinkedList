@@ -8,8 +8,8 @@ namespace DS_LinkedList
         {
             LinkedList linkedList = new LinkedList();
             linkedList.Append(56);
-            linkedList.Append(30);
             linkedList.Append(70);
+            linkedList.InsertAtGivenPosition(2, 30);
             linkedList.Display();
         }
     }
