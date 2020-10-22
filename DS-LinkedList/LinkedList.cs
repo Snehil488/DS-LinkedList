@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DS_LinkedList
 {
-    class LinkedList
+    public class LinkedList
     {
         Node head;
         public void Add(int data)
@@ -96,6 +96,30 @@ namespace DS_LinkedList
                 n.next = null;
                 return removedNode;
             }
+        }
+        public int Search(int data)
+        {
+            Node n = head;
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList Empty.");
+            }
+            if (head.data == data)
+            {
+                return head.data;
+            }
+            else
+            {
+                while (n.next != null)
+                {
+                    n = n.next;
+                    if (n.data == data)
+                    {
+                        return n.data;
+                    }
+                }
+            }
+            return 0;
         }
         public void Display()
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DS_LinkedList
 {
-    class Node
+    public class Node
     {
         internal int data;
         internal Node next;

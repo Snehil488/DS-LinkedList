@@ -11,8 +11,7 @@ namespace DS_LinkedList
             linkedList.Append(30);
             linkedList.Append(70);
             linkedList.Display();
-            Console.WriteLine("Popped last element " + linkedList.PopLast().data);
-            linkedList.Display();
+            Console.WriteLine("Searched Element is " + linkedList.Search(30));
         }
     }
 }
