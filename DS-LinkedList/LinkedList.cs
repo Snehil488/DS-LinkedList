@@ -97,7 +97,7 @@ namespace DS_LinkedList
                 return removedNode;
             }
         }
-        public int Search(int data)
+        public Node Search(int data)
         {
             Node n = head;
             if (head == null)
@@ -106,7 +106,7 @@ namespace DS_LinkedList
             }
             if (head.data == data)
             {
-                return head.data;
+                return head;
             }
             else
             {
@@ -115,11 +115,11 @@ namespace DS_LinkedList
                     n = n.next;
                     if (n.data == data)
                     {
-                        return n.data;
+                        return n;
                     }
                 }
             }
-            return 0;
+            return null;
         }
         public void Display()
         {

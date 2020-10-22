@@ -15,7 +15,7 @@ namespace DS_LinkedListTest
             linkedList.Append(node2);
             linkedList.Append(node3);
             int expexted = node2;
-            int actual = linkedList.Search(node2);
+            int actual = linkedList.Search(node2).data;
             Assert.AreEqual(expexted, actual);
         }
     }
