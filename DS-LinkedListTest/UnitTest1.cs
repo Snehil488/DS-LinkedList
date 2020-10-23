@@ -7,16 +7,20 @@ namespace DS_LinkedListTest
     public class UnitTest1
     {
         [TestMethod]
-        public void Given_Input_Element_to_Search_Should_Return_Element_If_Exists()
+        public void Inserting_Element_After_Particular_Should_Display_Desired_LinkedList()
         {
-            int node1 = 56, node2 = 30, node3 = 70;
-            LinkedList linkedList = new LinkedList();
-            linkedList.Append(node1);
-            linkedList.Append(node2);
-            linkedList.Append(node3);
-            int expexted = node2;
-            int actual = linkedList.Search(node2).data;
-            Assert.AreEqual(expexted, actual);
+            int node1 = 56, node2 = 30, node3 = 40, node4 = 70;
+            LinkedList expectedLinkedList = new LinkedList();
+            expectedLinkedList.Append(node1);
+            expectedLinkedList.Append(node2);
+            expectedLinkedList.Append(node3);
+            expectedLinkedList.Append(node4);
+            LinkedList actualLinkedList = new LinkedList();
+            actualLinkedList.Append(node1);
+            actualLinkedList.Append(node2);
+            actualLinkedList.Append(node4);
+            actualLinkedList.InsertNodeAfterParticularNode(node2, node3);
+            actualLinkedList.Equals(expectedLinkedList);
         }
     }
 }

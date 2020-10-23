@@ -121,6 +121,20 @@ namespace DS_LinkedList
             }
             return null;
         }
+        public void InsertNodeAfterParticularNode(int existingNodeData, int newNodeData)
+        {
+            Node n = Search(existingNodeData);
+            if(n != null)
+            {
+                Node node = new Node(newNodeData);
+                node.next = n.next;
+                n.next = node;
+            }
+            else
+            {
+                Console.WriteLine("Given Element not found.");
+            }
+        }
         public void Display()
         {
             if (head == null)

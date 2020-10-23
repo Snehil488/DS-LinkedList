@@ -11,7 +11,8 @@ namespace DS_LinkedList
             linkedList.Append(30);
             linkedList.Append(70);
             linkedList.Display();
-            Console.WriteLine("Searched Element is " + linkedList.Search(30).data);
+            linkedList.InsertNodeAfterParticularNode(30, 40);
+            linkedList.Display();
         }
     }
 }
