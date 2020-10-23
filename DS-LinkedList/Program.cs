@@ -10,9 +10,12 @@ namespace DS_LinkedList
             linkedList.Append(56);
             linkedList.Append(30);
             linkedList.Append(70);
-            linkedList.Display();
             linkedList.InsertNodeAfterParticularNode(30, 40);
             linkedList.Display();
+            linkedList.Size();
+            linkedList.DeleteGivenNode(40);
+            linkedList.Display();
+            linkedList.Size();
         }
     }
 }

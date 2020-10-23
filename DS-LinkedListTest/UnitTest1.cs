@@ -10,17 +10,14 @@ namespace DS_LinkedListTest
         public void Inserting_Element_After_Particular_Should_Display_Desired_LinkedList()
         {
             int node1 = 56, node2 = 30, node3 = 40, node4 = 70;
-            LinkedList expectedLinkedList = new LinkedList();
-            expectedLinkedList.Append(node1);
-            expectedLinkedList.Append(node2);
-            expectedLinkedList.Append(node3);
-            expectedLinkedList.Append(node4);
-            LinkedList actualLinkedList = new LinkedList();
-            actualLinkedList.Append(node1);
-            actualLinkedList.Append(node2);
-            actualLinkedList.Append(node4);
-            actualLinkedList.InsertNodeAfterParticularNode(node2, node3);
-            actualLinkedList.Equals(expectedLinkedList);
+            LinkedList linkedList = new LinkedList();
+            linkedList.Append(node1);
+            linkedList.Append(node2);
+            linkedList.Append(node3);
+            linkedList.Append(node4);
+            int expected = node3;
+            int actual = linkedList.DeleteGivenNode(node3).data;
+            Assert.AreEqual(expected, actual);
         }
     }
 }

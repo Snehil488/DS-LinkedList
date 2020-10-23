@@ -26,6 +26,7 @@ namespace DS_LinkedList
             if (head == null)
             {
                 head = node;
+                Console.WriteLine($"Appended {data} to LinkedList");
             }
             else
             {
@@ -35,6 +36,7 @@ namespace DS_LinkedList
                     n = n.next;
                 }
                 n.next = node;
+                Console.WriteLine($"Appended {data} to LinkedList");
             }
         }
         public void InsertAtGivenPosition(int position, int data)
@@ -129,11 +131,56 @@ namespace DS_LinkedList
                 Node node = new Node(newNodeData);
                 node.next = n.next;
                 n.next = node;
+                Console.WriteLine($"Inserted {newNodeData} after {existingNodeData} into LinkedList");
             }
             else
             {
                 Console.WriteLine("Given Element not found.");
             }
+        }
+        public int Size()
+        {
+            int size = 0;
+            Node n = head;
+            if(head == null)
+            {
+                Console.WriteLine($"Linked List is Empty, Size is {size}");
+            }
+            else
+            {
+                size = 1;
+                while(n.next != null)
+                {
+                    n = n.next;
+                    size++;
+                }
+                Console.WriteLine($"Linked List Size is {size}");
+            }
+            return size;
+        }
+        public Node DeleteGivenNode(int data)
+        {
+            Node n = Search(data);
+            if(n == null)
+            {
+                Console.WriteLine("Given Element not found, deletion not possible.");
+            }
+            else if (n == head)
+            {
+                head = head.next;
+                Console.WriteLine($"Deleted node {n.data}");                
+            }
+            else
+            {
+                Node node = head;
+                while(node.next.data != n.data)
+                {
+                    node = node.next;
+                }
+                Console.WriteLine($"Deleted node {n.data}");
+                node.next = n.next;
+            }
+            return n;
         }
         public void Display()
         {
@@ -143,6 +190,7 @@ namespace DS_LinkedList
             }
             else
             {
+                Console.Write("Current LinkedList : ");
                 Node n = head;
                 while (n.next != null)
                 {
